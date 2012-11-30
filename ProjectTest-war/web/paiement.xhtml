@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p = "http://primefaces.org/ui"  >
+
+<head>        
+     <title>BooXtore Paiement</title>
+</head>   
+
+    
+<h:body>
+    <f:view>
+        <h:form id="formulaire" >
+
+    
+
+    <div align="center"><h1><h:outputText value="Paiement par carte bleu"/></h1></div>
+
+
+<br><tr><td>
+    <div align="center">
+        
+    <img src="Image/visa.jpg" />
+        
+    </div>
+</td>
+        
+<td width="184">
+    <div align="center">
+        <h:outputText value="Votre Carte:"/>
+        <h:selectOneMenu value ="#{person.visa}">
+            <f:selectItem itemLabel="Visa" itemValue="visa"/>
+        </h:selectOneMenu>
+    </div>
+</td></tr>
+    
+<tr>
+    
+<td height="40">
+    <div align="center">
+        <h:outputText value="Numero de la carte bleu :"/>
+    </div>
+</td>
+    
+    
+<td>
+    <div align="center">
+        <h:inputText value="#{person.visa}" />
+    </div>
+</td></tr></br>
+
+    
+        </h:form>
+    </f:view>
+</h:body>
+    
+</html>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p = "http://primefaces.org/ui">
+    
+<h:head>
+        <title>BooXtore</title>
+</h:head>
+    
+    
+<h:body>
+    
+    <p:accordionPanel>
+        <p:tab title="Editer mon compte ">
+            <h:panelGrid columns="2" cellpadding="10" width="200">
+                <div align="center"><h1><h:outputText value="Mon adresse"/></h1><br/><br/>
+                    <h:inputText value="#{person.adresse}"  maxlength="50" /></div>
+                    
+                    <div align="center"><h:commandButton action="greeting" value="Validé"/></div>
+                    
+                    <h1><h:outputText value="Mon mot de passe"/></h1><br/><br/>
+                    <div align="center"><h:outputText value=" - Nouveau mots de passe:"/><br/><br/>
+        <p:password id="pwd1" value="#{passwordBean.password6}" feedback="false"
+match="pwd2" label="Password 1" required="true"/></div>
+<br/><br/>
+
+                    <div align="center"><h:outputText value=" - Confirmation du nouveau mot de passe:"/><br/><br/>
+        <p:password id="pwd2" value="#{passwordBean.password6}" feedback="false"
+label="Password 2" required="true"/></div>
+        <br/><br/>
+        
+                <h:commandButton action="greeting" value="Validé"/>
+                
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Panier">
+            <h:panelGrid columns="2" cellpadding="10" width="200">
+                <img src="Image/caddy.png" />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Mes commandes">
+            <h:panelGrid columns="2" cellpadding="10" width="200">
+                <h:outputText value="Livre(s) commandé(s)"/>
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Ce déconnecter">
+            <h:panelGrid columns="2" cellpadding="10" width="200">
+                <h:commandButton action="greeting" value="êtes vous sur ?"/>
+            </h:panelGrid>
+        </p:tab>
+    </p:accordionPanel>
+
+</h:body>
+    
+</html>

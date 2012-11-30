@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>BooXtore</title>
+    </h:head>
+    <h:body>
+<h:form>
+
+    <p:selectCheckboxMenu value="#{formBean.selectedcatégories}" label="Catégorie" filter="true" filterText="Filter" filterMatchMode="startsWith" panelStyle="width:220px">
+        <f:selectItems value="#{formBean.livres}" />
+    </p:selectCheckboxMenu>
+
+    <p:separator style="margin-bottom:10px"/>
+
+    <p:commandButton value="Submit" update="display" oncomplete="dlg.show()" />
+
+    <p:dialog header="Selectionner une ou plusieurs catégories" modal="true" showEffect="fade" hideEffect="fade" widgetVar="dlg" resizable="false">
+        <p:dataList id="display" value="#{formBean.selectedMovies}" var="movie">
+            #{livres}
+        </p:dataList>
+    </p:dialog>
+
+</h:form>
+    </h:body>
+</html>
+
